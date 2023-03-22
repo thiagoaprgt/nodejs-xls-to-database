@@ -44,6 +44,19 @@ Parte 3: Projeto importação do xls para o banco de dados
 			npm install mysql2
 			npm install xlsx
 			
-Agora é só construir a aplicação
+
+Parte 4: Importação
+
+	No arquivo read_xls.js escolha qual arquivo xls será importado, nessa aplicação o arquivo é teste.xls
+
+	No arquivo db.js coloque as informações para o acesso ao banco de dados.
+
+	É necessário criar uma model para o sequelize, nessa aplicação a model é o arquivo contato.js.
+
+	A model tem que ter as mesma colunas do arquivo xls, senão haverá erros.
+
+	Por último use o comando:
+
+		node xls_import
 
 
