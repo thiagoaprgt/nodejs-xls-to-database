@@ -3,7 +3,7 @@ const sequelize = require('sequelize');
 const connection = {
     databaseName : "thiago_db",
     user : "root",
-    password : "",  
+    password : "dev",  
     databaseType: "mysql",
     host : "127.0.0.1", 
     port : 13306
@@ -23,4 +23,4 @@ const database = new sequelize(
 )
 
 
-module.exports = selequelize;
+module.exports = connection;

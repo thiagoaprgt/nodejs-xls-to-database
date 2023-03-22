@@ -15,5 +15,11 @@ const sheet = worksheets[0];
 
 const data = xlsx.utils.sheet_to_json(workbook.Sheets[sheet]);
 
-console.log(data);
+//console.log(data);
+
+
+module.exports = data;
+
+
+
 
