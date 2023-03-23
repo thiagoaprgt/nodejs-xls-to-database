@@ -12,7 +12,7 @@ const columnNames = Object.keys(xls[0]);
 
 //console.log(columnNames);
 
-// Nome da tabela, a tabela precisa existirs
+// Nome da tabela, a tabela precisa existir
 
 const tableName = 'contato_teste';
 
@@ -26,7 +26,7 @@ function insert(tableName, json) {
 
   sql += sqlColumnNames + ' ) ';
 
-  let values = Object.values(json); // retorna um array com os valores do jsons
+  let values = Object.values(json); // retorna um array com os valores do json
 
   let sqlValues = ' VALUES ( ';
 
