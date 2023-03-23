@@ -14,13 +14,13 @@ const columnNames = Object.keys(xls[0]);
 
 // Nome da tabela, a tabela precisa existirs
 
-const tableName = 'contatos';
+const tableName = 'contato_teste';
 
 // Preparando o comando SQL
 
 function insert(tableName, json) {
 
-  let sql = 'insert into ' + tableName + ' (';
+  let sql = 'INSERT INTO ' + tableName + ' (';
 
   sqlColumnNames = columnNames.join(", ");
 
@@ -28,13 +28,13 @@ function insert(tableName, json) {
 
   let values = Object.values(json); // retorna um array com os valores do jsons
 
-  let sqlValues = ' values ( ';
+  let sqlValues = ' VALUES ( ';
 
   for (let index = 0; index < values.length; index++) {
 
     if(typeof(values[index]) == 'string')    {
       
-      sqlValues += ' `'+ values[index] + '`';
+      sqlValues += " '"+ values[index] +"' ";
 
     }else {
       sqlValues += ' ' + values[index] + '';
@@ -56,14 +56,10 @@ function insert(tableName, json) {
 
 }
 
-insert(tableName, xls[0]);
-
-
-
 
 // create the connection to database
 
-/*
+
 
 const connection = mysql.createConnection({
   host: '127.0.0.1',
@@ -73,18 +69,29 @@ const connection = mysql.createConnection({
   port: 13306
 });
 
+/*
+for (let index = 0; index < xls.length; index++) {
 
-connection.query('SELECT id, document, email FROM account LIMIT 5', (err, res) => { 
+  let sql = insert(tableName, xls[index]);
 
-  for (let index = 0; index < xls.length; index++) {
+  connection.query(sql, (err, res) => { 
+    connection.end();   
+  });
+  
+}
+*/
 
-    // insere os resultados
-    
-  }
 
-  connection.end(); 
+const sql = insert(tableName, xls[1]);
 
+
+connection.query(`${sql}`, (err, res) => { 
+  connection.end();   
 });
 
-*/
+
+
+
+
+
 
