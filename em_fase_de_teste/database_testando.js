@@ -22,7 +22,7 @@ function insert(tableName, json) {
 
   let sql = 'INSERT INTO ' + tableName + ' (';
 
-  sqlColumnNames = columnNames.join(", ");
+  sqlColumnNames = columnNames.join(", ");  // retorna uma string com os elementos do array separado por vírgula
 
   sql += sqlColumnNames + ' ) ';
 
