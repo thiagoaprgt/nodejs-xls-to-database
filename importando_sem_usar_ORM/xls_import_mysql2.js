@@ -1,6 +1,6 @@
 // get the client
 const mysql = require('mysql2');
-const readXLS = require('./../read_xls');
+const readXLS = require('../read_xls');
 
 const file = './../teste.xls';
 
@@ -65,11 +65,11 @@ const connection = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
   password: 'dev',
-  database: 'proponto',
+  database: 'thiago_db',
   port: 13306
 });
 
-/*
+
 for (let index = 0; index < xls.length; index++) {
 
   let sql = insert(tableName, xls[index]);
@@ -79,15 +79,7 @@ for (let index = 0; index < xls.length; index++) {
   });
   
 }
-*/
 
-
-const sql = insert(tableName, xls[1]);
-
-
-connection.query(`${sql}`, (err, res) => { 
-  connection.end();   
-});
 
 
 
