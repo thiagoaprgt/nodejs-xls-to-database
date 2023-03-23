@@ -1,6 +1,8 @@
-const xls = require('./read_xls');
+const readXLS = require('./read_xls');
+const file = './teste.xls';
 
-// console.log(xls.length);
+const xls = readXLS(file);
+
 
 (async () => {    
     
