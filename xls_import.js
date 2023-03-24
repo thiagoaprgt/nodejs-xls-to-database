@@ -12,10 +12,9 @@ const xls = readXLS(file);
 
     for (let index = 0; index < xls.length; index++) {
 
-        contato.create(xls[index])
+        await contato.create(xls[index])
         
     }
-    
 
 })();
 
