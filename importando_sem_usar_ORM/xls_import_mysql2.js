@@ -74,11 +74,13 @@ for (let index = 0; index < xls.length; index++) {
 
   let sql = insert(tableName, xls[index]);
 
-  connection.query(sql, (err, res) => { 
-    connection.end();   
+  connection.query(sql, (err, res) => {
+    
   });
   
 }
+
+connection.end(); 
 
 
 
