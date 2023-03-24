@@ -1,5 +1,5 @@
 const sequelize = require('sequelize');
-const database = require('./db');
+const database = require('../db');
 
 /*
  ao construir a tabela o sequelize coloca um s no final do nome da tabela, 
